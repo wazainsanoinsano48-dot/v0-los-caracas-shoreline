@@ -28,37 +28,40 @@ export function ItinerarySection() {
   ]
 
   const ActivityCard = ({ activity }: { activity: (typeof day1Activities)[0] }) => (
-    <div className="flex gap-6 pb-8 relative">
+    <div className="flex gap-6 pb-6 relative">
       <div className="flex flex-col items-center">
-        <div className="w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center text-gray-900 flex-shrink-0 font-black">
-          ✓
+        <div className="w-10 h-10 rounded-full border-2 border-slate-900 flex items-center justify-center flex-shrink-0 bg-white">
+          <div className="w-2 h-2 rounded-full bg-slate-900"></div>
         </div>
-        <div className="w-1 h-20 bg-cyan-100 my-3"></div>
+        <div className="w-px h-16 bg-slate-300 my-2"></div>
       </div>
-      <div className="pb-2 flex-1">
-        <p className="font-black text-cyan-600 text-sm uppercase tracking-wider">{activity.time}</p>
-        <h4 className="text-xl font-bold text-slate-900 mt-2">{activity.activity}</h4>
-        <div className="flex items-center gap-2 mt-2 text-slate-600">
-          <MapPin className="w-4 h-4" />
-          <span className="text-sm">{activity.location}</span>
+      <div className="pb-2 flex-1 pt-1">
+        <p className="font-semibold text-slate-500 text-xs uppercase tracking-widest">{activity.time}</p>
+        <h4 className="text-base font-serif text-slate-900 mt-2">{activity.activity}</h4>
+        <div className="flex items-center gap-2 mt-2 text-slate-500">
+          <MapPin className="w-3.5 h-3.5" />
+          <span className="text-xs font-light">{activity.location}</span>
         </div>
       </div>
     </div>
   )
 
   return (
-    <section className="py-24 md:py-32 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-6xl md:text-7xl font-black text-slate-900 mb-20">Your Schedule</h2>
+    <section id="itinerary" className="py-32 md:py-40 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="mb-20">
+          <p className="text-sm font-semibold tracking-widest uppercase text-slate-500 mb-4">Experience</p>
+          <h2 className="text-5xl md:text-6xl font-serif text-slate-900">Your 2-Day Itinerary</h2>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           {/* Day 1 */}
           <div>
-            <h3 className="text-3xl font-black text-slate-900 mb-10 flex items-center gap-3">
-              <span className="w-10 h-10 rounded-full bg-cyan-400 text-gray-900 flex items-center justify-center font-black text-lg">
+            <h3 className="text-2xl font-serif text-slate-900 mb-12 flex items-center gap-4">
+              <span className="w-8 h-8 rounded-full border-2 border-slate-900 flex items-center justify-center font-serif text-sm font-bold">
                 1
               </span>
-              Day 1: Adventure
+              Day One: Discovery
             </h3>
             <div className="space-y-2">
               {day1Activities.map((activity, index) => (
@@ -69,11 +72,11 @@ export function ItinerarySection() {
 
           {/* Day 2 */}
           <div>
-            <h3 className="text-3xl font-black text-slate-900 mb-10 flex items-center gap-3">
-              <span className="w-10 h-10 rounded-full bg-cyan-400 text-gray-900 flex items-center justify-center font-black text-lg">
+            <h3 className="text-2xl font-serif text-slate-900 mb-12 flex items-center gap-4">
+              <span className="w-8 h-8 rounded-full border-2 border-slate-900 flex items-center justify-center font-serif text-sm font-bold">
                 2
               </span>
-              Day 2: Wellness
+              Day Two: Renewal
             </h3>
             <div className="space-y-2">
               {day2Activities.map((activity, index) => (

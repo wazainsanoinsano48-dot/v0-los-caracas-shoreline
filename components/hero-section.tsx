@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export function HeroSection() {
   return (
-    <section className="relative w-full h-screen bg-gradient-to-b from-turquoise-50 to-white overflow-hidden">
+    <section className="relative w-full h-screen bg-slate-900 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -15,35 +15,40 @@ export function HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/30 to-slate-900"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="text-7xl md:text-8xl lg:text-9xl font-black text-white text-balance leading-tight tracking-tight">
-            Where the<br />River Runs<br />to the Reef
-          </h1>
+        <div className="max-w-5xl mx-auto space-y-10">
+          <div className="space-y-4">
+            <p className="text-sm sm:text-base font-semibold tracking-widest uppercase text-white/70">
+              Discover Paradise
+            </p>
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-serif text-white text-balance leading-tight">
+              Where the River Runs to the Reef
+            </h1>
+          </div>
 
-          <p className="text-xl md:text-2xl text-white/95 max-w-2xl mx-auto font-light leading-relaxed">
-            All-inclusive escape on Colombia's Central Coast
+          <p className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto font-light leading-relaxed">
+            An all-inclusive sanctuary on Colombia's Central Coast designed for transformative moments and cherished memories.
           </p>
 
-          <div className="pt-8 flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="pt-6 flex flex-col sm:flex-row gap-5 justify-center items-center">
             <Button
               size="lg"
-              className="bg-cyan-400 hover:bg-cyan-300 text-gray-900 font-black px-10 py-7 text-lg rounded-full shadow-lg transition-all hover:scale-105"
+              className="bg-white text-blue-900 hover:bg-slate-100 font-semibold px-8 py-3 rounded-full shadow-lg transition-all hover:shadow-xl"
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Book Now
+              Reserve Your Stay
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white/20 px-10 py-7 text-lg rounded-full font-bold"
+              className="border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-full font-semibold transition-all"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Discover
+              Explore
             </Button>
           </div>
         </div>

@@ -25,27 +25,27 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-slate-100">
-      <nav className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-18">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="#" className="flex-shrink-0 flex items-center gap-2">
+          <Link href="#" className="flex-shrink-0">
             <Image
               src="/logo.png"
               alt="Los Caracas Shoreline"
-              width={50}
-              height={50}
-              className="h-14 w-auto"
+              width={48}
+              height={48}
+              className="h-12 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-12">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm font-semibold text-slate-700 hover:text-cyan-500 transition-colors"
+                className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors duration-200"
               >
                 {item.label}
               </button>
@@ -56,9 +56,9 @@ export function Header() {
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-6 py-2 bg-cyan-400 text-gray-900 rounded-full hover:bg-cyan-300 transition-colors font-black text-sm"
+              className="px-6 py-2.5 bg-slate-900 text-white rounded-full hover:bg-slate-800 transition-colors duration-200 font-semibold text-sm"
             >
-              Book
+              Reserve
             </button>
           </div>
 

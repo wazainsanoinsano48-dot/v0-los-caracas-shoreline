@@ -27,26 +27,31 @@ export function FacilitiesSection() {
   ]
 
   return (
-    <section className="py-24 md:py-32 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-6xl md:text-7xl font-black text-slate-900 mb-20">What Awaits You</h2>
+    <section className="py-32 md:py-40 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="mb-24">
+          <h2 className="text-5xl md:text-6xl font-serif text-slate-900 mb-6">Your Sanctuary Awaits</h2>
+          <p className="text-lg text-slate-600 max-w-xl font-light">
+            Experience world-class amenities designed for complete relaxation and unforgettable adventures
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {facilities.map((facility, index) => (
             <div
               key={index}
               className="group flex flex-col"
             >
-              <div className="relative h-80 w-full overflow-hidden rounded-3xl mb-6">
+              <div className="relative h-96 w-full overflow-hidden rounded-2xl mb-8 shadow-lg">
                 <Image
                   src={facility.image}
                   alt={facility.title}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <h3 className="text-3xl font-black text-slate-900 mb-3">{facility.title}</h3>
-              <p className="text-lg text-slate-600 font-light leading-relaxed">{facility.description}</p>
+              <h3 className="text-2xl font-serif text-slate-900 mb-4">{facility.title}</h3>
+              <p className="text-base text-slate-600 font-light leading-relaxed">{facility.description}</p>
             </div>
           ))}
         </div>
