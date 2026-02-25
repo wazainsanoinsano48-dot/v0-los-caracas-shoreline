@@ -32,7 +32,7 @@ export function Header() {
           <Link href="#" className="flex-shrink-0">
             <Image
               src="/logo.png"
-              alt="Los Caracas La Guaira"
+              alt="Los Caracas Shoreline"
               width={48}
               height={48}
               className="h-12 w-auto"
