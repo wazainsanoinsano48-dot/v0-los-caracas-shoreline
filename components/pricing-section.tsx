@@ -36,48 +36,48 @@ export function PricingSection() {
   ]
 
   return (
-    <section id="pricing" className="py-32 md:py-40 bg-slate-50">
+    <section id="pricing" className="py-24 md:py-32 bg-gradient-to-b from-background to-secondary/20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-20">
-          <p className="text-sm font-semibold tracking-widest uppercase text-slate-500 mb-4">Investment</p>
-          <h2 className="text-5xl md:text-6xl font-serif text-slate-900 mb-8">Transparent Pricing</h2>
-          <p className="text-lg text-slate-600 font-light max-w-2xl">
+          <p className="text-xs font-light tracking-widest uppercase text-muted-foreground/60 mb-4">Investment</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">Transparent Pricing</h2>
+          <p className="text-base text-muted-foreground/80 font-light max-w-2xl leading-relaxed">
             All-inclusive rates for your 2-day escape. No hidden surprises, only exceptional value.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
           {pricingTiers.map((tier, index) => {
             const Icon = tier.icon
             return (
               <Card
                 key={index}
-                className={`relative overflow-hidden transition-all duration-500 rounded-2xl ${
+                className={`relative overflow-hidden transition-all duration-500 rounded-sm border ${
                   tier.highlight
-                    ? 'ring-2 ring-slate-900 shadow-xl md:scale-105'
-                    : 'shadow-md hover:shadow-lg'
+                    ? 'border-accent bg-secondary/40 ring-1 ring-accent/50 md:scale-105'
+                    : 'border-border/40 hover:border-accent/30 hover:shadow-sm'
                 }`}
               >
                 {tier.highlight && (
-                  <div className="absolute top-6 right-6 bg-slate-900 text-white px-4 py-2 rounded-full text-xs font-semibold tracking-widest uppercase">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-accent to-accent/80 text-white px-3 py-1 rounded-sm text-xs font-light tracking-widest uppercase">
                     Most Popular
                   </div>
                 )}
 
-                <div className="p-8 lg:p-10">
-                  <h3 className="text-2xl font-serif text-slate-900 mb-2">{tier.title}</h3>
-                  <p className="text-sm text-slate-600 font-light mb-8">{tier.description}</p>
+                <div className="p-8 lg:p-8">
+                  <h3 className="text-lg font-serif text-foreground mb-1">{tier.title}</h3>
+                  <p className="text-xs text-muted-foreground/70 font-light mb-6">{tier.description}</p>
 
-                  <div className="mb-10 pt-4 border-t border-slate-200">
-                    <span className="text-4xl font-serif text-slate-900 block mt-4">{tier.price}</span>
-                    <p className="text-sm text-slate-600 font-light mt-2">{tier.period}</p>
+                  <div className="mb-8 pt-4 border-t border-border/40">
+                    <span className="text-3xl font-serif text-foreground block mt-4">{tier.price}</span>
+                    <p className="text-xs text-muted-foreground/70 font-light mt-2">{tier.period}</p>
                   </div>
 
-                  <ul className="space-y-4 mb-10">
+                  <ul className="space-y-3 mb-8">
                     {tier.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-slate-700 font-light text-sm">
-                        <span className="w-4 h-4 border border-slate-400 rounded-full flex-shrink-0 flex items-center justify-center mt-1">
-                          <span className="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>
+                      <li key={idx} className="flex items-start gap-2 text-muted-foreground/75 font-light text-xs">
+                        <span className="w-3 h-3 border border-muted-foreground/30 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                          <span className="w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
                         </span>
                         {feature}
                       </li>
@@ -85,10 +85,10 @@ export function PricingSection() {
                   </ul>
 
                   <Button
-                    className={`w-full rounded-full font-semibold py-3 text-base transition-all duration-300 ${
+                    className={`w-full rounded-sm font-light py-2 text-xs tracking-wide uppercase transition-all duration-300 ${
                       tier.highlight
-                        ? 'bg-slate-900 hover:bg-slate-800 text-white'
-                        : 'border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
+                        ? 'bg-gradient-to-r from-accent to-accent/80 hover:shadow-md text-white'
+                        : 'border border-foreground/20 text-foreground hover:bg-foreground/5'
                     }`}
                   >
                     Reserve Now
@@ -100,20 +100,20 @@ export function PricingSection() {
         </div>
 
         {/* Important Info */}
-        <div className="bg-white rounded-2xl p-10 lg:p-12 border border-slate-200 shadow-sm">
-          <h3 className="text-xl font-serif text-slate-900 mb-10">Key Details</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="bg-secondary/30 rounded-sm p-10 lg:p-12 border border-border/40">
+          <h3 className="text-lg font-serif text-foreground mb-8">Key Details</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Group Size</p>
-              <p className="text-2xl font-serif text-slate-900">40+ guests</p>
+              <p className="text-xs font-light text-muted-foreground/60 uppercase tracking-widest">Group Size</p>
+              <p className="text-2xl font-serif text-foreground">40+ guests</p>
             </div>
             <div className="space-y-2">
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Duration</p>
-              <p className="text-2xl font-serif text-slate-900">2 Days &amp; 1 Night</p>
+              <p className="text-xs font-light text-muted-foreground/60 uppercase tracking-widest">Duration</p>
+              <p className="text-2xl font-serif text-foreground">2 Days &amp; 1 Night</p>
             </div>
             <div className="space-y-2">
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Availability</p>
-              <p className="text-2xl font-serif text-slate-900">Custom Dates</p>
+              <p className="text-xs font-light text-muted-foreground/60 uppercase tracking-widest">Availability</p>
+              <p className="text-2xl font-serif text-foreground">Custom Dates</p>
             </div>
           </div>
         </div>
