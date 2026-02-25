@@ -29,7 +29,7 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="#" className="flex-shrink-0">
+          <Link href="#" className="flex-shrink-0 flex items-center gap-3">
             <Image
               src="/logo.png"
               alt="Los Caracas Shoreline"
@@ -37,6 +37,7 @@ export function Header() {
               height={48}
               className="h-12 w-auto"
             />
+            <span className="text-xl font-bold text-slate-900 hidden sm:inline">Los Caracas Shoreline</span>
           </Link>
 
           {/* Desktop Navigation */}
