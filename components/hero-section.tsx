@@ -10,10 +10,11 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260223-WA0010-7kfFgO4BUC00jxHLBcswWXWWx7lSwI.jpg"
-          alt="Los Caracas Shoreline Resort"
+          alt="Los Caracas La Guaira Resort"
           fill
           className="object-cover"
           priority
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/30 to-slate-900"></div>
       </div>
@@ -31,7 +32,7 @@ export function HeroSection() {
           </div>
 
           <p className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto font-light leading-relaxed">
-            An all-inclusive sanctuary on Colombia's Central Coast designed for transformative moments and cherished memories.
+            An all-inclusive sanctuary in La Guaira, Venezuela designed for transformative moments and cherished memories.
           </p>
 
           <div className="pt-6 flex flex-col sm:flex-row gap-5 justify-center items-center">

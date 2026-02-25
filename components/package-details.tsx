@@ -18,7 +18,7 @@ export function PackageDetails() {
   ]
 
   return (
-    <section className="py-32 md:py-40 bg-white">
+    <section id="package" className="py-32 md:py-40 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Left side - Features */}

@@ -27,7 +27,7 @@ export function FacilitiesSection() {
   ]
 
   return (
-    <section className="py-32 md:py-40 bg-slate-50">
+    <section id="facilities" className="py-32 md:py-40 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-24">
           <h2 className="text-5xl md:text-6xl font-serif text-slate-900 mb-6">Your Sanctuary Awaits</h2>

@@ -8,9 +8,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 const _playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  title: 'Los Caracas Shoreline - All-Inclusive Vacation Packages',
-  description: 'Experience an unforgettable all-inclusive escape on Colombia\'s Central Coast. Perfect for groups. Where the river runs to the reef.',
-  keywords: 'vacation, resort, Colombia, Caribbean, group travel, all-inclusive',
+  title: 'Los Caracas La Guaira - All-Inclusive Vacation Packages',
+  description: 'Experience an unforgettable all-inclusive escape in La Guaira, Venezuela. Perfect for groups. Where the river runs to the reef.',
+  keywords: 'vacation, resort, Venezuela, Caribbean, group travel, all-inclusive, La Guaira',
   generator: 'v0.app',
   icons: {
     icon: [

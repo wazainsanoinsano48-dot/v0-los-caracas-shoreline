@@ -19,11 +19,11 @@ export function Footer() {
               />
               <div>
                 <p className="text-xl font-bold">Los Caracas</p>
-                <p className="text-xs text-blue-200">Shoreline</p>
+                <p className="text-xs text-blue-200">La Guaira</p>
               </div>
             </div>
             <p className="text-sm text-blue-100 leading-relaxed">
-              Where the river runs to the reef. Experience an unforgettable all-inclusive escape on Colombia's Central Coast.
+              Where the river runs to the reef. Experience an unforgettable all-inclusive escape in La Guaira, Venezuela.
             </p>
           </div>
 
@@ -77,14 +77,14 @@ export function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-blue-300 flex-shrink-0 mt-0.5" />
-                <a href="tel:+573001234567" className="text-blue-100 hover:text-white transition-colors text-sm">
-                  +57 (300) 123-4567
+                <a href="tel:+584120000000" className="text-blue-100 hover:text-white transition-colors text-sm">
+                  +58 (412) 000-0000
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-blue-300 flex-shrink-0 mt-0.5" />
                 <p className="text-blue-100 text-sm">
-                  Central Coast, Colombia
+                  La Guaira, Venezuela
                 </p>
               </div>
             </div>
@@ -95,7 +95,7 @@ export function Footer() {
         <div className="border-t border-blue-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-blue-200 text-sm">
-              &copy; 2026 Los Caracas Shoreline. All rights reserved.
+              &copy; 2026 Los Caracas La Guaira. All rights reserved.
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="text-blue-200 hover:text-white transition-colors text-sm">

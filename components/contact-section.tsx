@@ -49,7 +49,7 @@ export function ContactSection() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Ready to Reserve?</h2>
               <p className="text-lg text-slate-300 leading-relaxed">
-                Contact our team today to book your group's unforgettable escape to Los Caracas Shoreline. We'll handle all the details.
+                Contact our team today to book your group's unforgettable escape to Los Caracas La Guaira. We'll handle all the details.
               </p>
             </div>
 
@@ -58,8 +58,8 @@ export function ContactSection() {
                 <Mail className="w-6 h-6 text-turquoise-400 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <a href="mailto:info@loscaracasshoreline.com" className="text-slate-300 hover:text-turquoise-400">
-                    info@loscaracasshoreline.com
+                  <a href="mailto:info@loscaracaslaguaira.com" className="text-slate-300 hover:text-turquoise-400">
+                    info@loscaracaslaguaira.com
                   </a>
                 </div>
               </div>
@@ -68,8 +68,8 @@ export function ContactSection() {
                 <Phone className="w-6 h-6 text-turquoise-400 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
-                  <a href="tel:+5712345678" className="text-slate-300 hover:text-turquoise-400">
-                    +57 (1) 234-5678
+                  <a href="tel:+584120000000" className="text-slate-300 hover:text-turquoise-400">
+                    +58 (412) 000-0000
                   </a>
                 </div>
               </div>
@@ -79,8 +79,8 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-semibold mb-1">Location</h3>
                   <p className="text-slate-300">
-                    Ciudad Vacacional Los Caracas<br />
-                    Central Coast, Colombia
+                    Los Caracas La Guaira<br />
+                    La Guaira, Venezuela
                   </p>
                 </div>
               </div>
