@@ -28,19 +28,19 @@ export function ItinerarySection() {
   ]
 
   const ActivityCard = ({ activity }: { activity: (typeof day1Activities)[0] }) => (
-    <div className="flex gap-4 pb-6 relative">
+    <div className="flex gap-4 pb-8 relative">
       <div className="flex flex-col items-center">
-        <div className="w-12 h-12 rounded-full bg-turquoise-600 flex items-center justify-center text-white flex-shrink-0">
-          <Clock className="w-5 h-5" />
+        <div className="w-10 h-10 rounded-full bg-emerald-700 flex items-center justify-center text-white flex-shrink-0">
+          <Clock className="w-4 h-4" />
         </div>
-        <div className="w-1 h-16 bg-turquoise-200 my-2"></div>
+        <div className="w-0.5 h-20 bg-emerald-200 my-2"></div>
       </div>
-      <div className="pb-2">
-        <p className="font-bold text-turquoise-600 text-sm">{activity.time}</p>
-        <h4 className="text-lg font-semibold text-slate-900 mt-1">{activity.activity}</h4>
+      <div className="pb-2 pt-0.5">
+        <p className="font-medium text-emerald-700 text-xs uppercase tracking-wide">{activity.time}</p>
+        <h4 className="text-base font-light text-slate-900 mt-2">{activity.activity}</h4>
         <div className="flex items-center gap-2 mt-2 text-slate-600">
-          <MapPin className="w-4 h-4" />
-          <span className="text-sm">{activity.location}</span>
+          <MapPin className="w-3.5 h-3.5" />
+          <span className="text-xs font-light">{activity.location}</span>
         </div>
       </div>
     </div>

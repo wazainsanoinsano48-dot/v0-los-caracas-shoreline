@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export function HeroSection() {
   return (
-    <section className="relative w-full h-screen bg-gradient-to-b from-turquoise-50 to-white overflow-hidden">
+    <section className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -15,40 +15,42 @@ export function HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl font-bold text-white text-balance leading-tight">
-              Los Caracas Shoreline
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-20">
+        <div className="max-w-2xl mx-auto space-y-8 text-center">
+          <div className="space-y-3">
+            <div className="text-sm tracking-widest text-emerald-400 uppercase font-medium">
+              Experiencia Tropical
+            </div>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white text-balance leading-tight tracking-tight">
+              Los Caracas<br />Shoreline
             </h1>
-            <p className="text-xl md:text-2xl text-turquoise-100 font-light italic">
+            <p className="text-xl md:text-2xl text-emerald-100 font-light italic mt-4">
               Where the river runs to the reef
             </p>
           </div>
 
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Experience an unforgettable all-inclusive escape on Colombia's Central Coast. Reconnect with nature, adventure, and each other.
+          <p className="text-lg md:text-xl text-white/85 max-w-xl mx-auto leading-relaxed font-light">
+            Vive una experiencia inolvidable todo incluido en la costa colombiana. Reconéctate con la naturaleza, aventura y los tuyos.
           </p>
 
-          <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="bg-turquoise-600 hover:bg-turquoise-700 text-white px-8 py-6 text-lg rounded-full"
+              className="bg-emerald-700 hover:bg-emerald-800 text-white px-10 py-6 text-base font-medium rounded-md transition-all duration-300"
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Explore Packages
+              Ver Paquetes
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full"
+              className="border-2 border-white text-white hover:bg-white/10 px-10 py-6 text-base font-medium rounded-md transition-all duration-300"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Learn More
+              Más Información
             </Button>
           </div>
         </div>
@@ -57,7 +59,7 @@ export function HeroSection() {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
         <div className="animate-bounce text-white">
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
