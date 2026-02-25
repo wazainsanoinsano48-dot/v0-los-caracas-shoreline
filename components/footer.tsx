@@ -4,50 +4,50 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-6xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-gradient-to-b from-background to-secondary/40 border-t border-border/40">
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand Section */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-2 mb-4">
               <Image
                 src="/logo.png"
                 alt="Los Caracas Shoreline"
-                width={60}
-                height={60}
-                className="h-16 w-auto"
+                width={48}
+                height={48}
+                className="h-12 w-auto"
               />
               <div>
-                <p className="text-xl font-bold">Los Caracas</p>
-                <p className="text-xs text-blue-200">Shoreline</p>
+                <p className="text-sm font-light text-foreground">Los Caracas</p>
+                <p className="text-xs text-muted-foreground/60">Shoreline</p>
               </div>
             </div>
-            <p className="text-sm text-blue-100 leading-relaxed">
+            <p className="text-xs text-muted-foreground/70 leading-relaxed font-light">
               Where the river runs to the reef. Experience an unforgettable all-inclusive escape.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-xs font-light text-foreground mb-4 tracking-widest uppercase">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#facilities" className="text-blue-100 hover:text-white transition-colors">
+                <a href="#facilities" className="text-xs text-muted-foreground/70 hover:text-accent transition-colors font-light">
                   Facilities
                 </a>
               </li>
               <li>
-                <a href="#package" className="text-blue-100 hover:text-white transition-colors">
+                <a href="#package" className="text-xs text-muted-foreground/70 hover:text-accent transition-colors font-light">
                   Packages
                 </a>
               </li>
               <li>
-                <a href="#itinerary" className="text-blue-100 hover:text-white transition-colors">
+                <a href="#itinerary" className="text-xs text-muted-foreground/70 hover:text-accent transition-colors font-light">
                   Itinerary
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-blue-100 hover:text-white transition-colors">
+                <a href="#pricing" className="text-xs text-muted-foreground/70 hover:text-accent transition-colors font-light">
                   Pricing
                 </a>
               </li>
@@ -56,34 +56,34 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-xs font-light text-foreground mb-4 tracking-widest uppercase">Services</h3>
             <ul className="space-y-2">
-              <li className="text-blue-100">Group Bookings</li>
-              <li className="text-blue-100">Private Events</li>
-              <li className="text-blue-100">Team Building</li>
-              <li className="text-blue-100">Corporate Retreats</li>
+              <li className="text-xs text-muted-foreground/70 font-light">Group Bookings</li>
+              <li className="text-xs text-muted-foreground/70 font-light">Private Events</li>
+              <li className="text-xs text-muted-foreground/70 font-light">Team Building</li>
+              <li className="text-xs text-muted-foreground/70 font-light">Corporate Retreats</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+            <h3 className="text-xs font-light text-foreground mb-4 tracking-widest uppercase">Contact Info</h3>
             <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-blue-300 flex-shrink-0 mt-0.5" />
-                <a href="mailto:info@loscaracasshoreline.com" className="text-blue-100 hover:text-white transition-colors text-sm">
+              <div className="flex items-start gap-2">
+                <Mail className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                <a href="mailto:info@loscaracasshoreline.com" className="text-xs text-muted-foreground/70 hover:text-accent transition-colors font-light">
                   info@loscaracasshoreline.com
                 </a>
               </div>
-              <div className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-blue-300 flex-shrink-0 mt-0.5" />
-                <a href="tel:+573001234567" className="text-blue-100 hover:text-white transition-colors text-sm">
+              <div className="flex items-start gap-2">
+                <Phone className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                <a href="tel:+573001234567" className="text-xs text-muted-foreground/70 hover:text-accent transition-colors font-light">
                   +57 (300) 123-4567
                 </a>
               </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-blue-300 flex-shrink-0 mt-0.5" />
-                <p className="text-blue-100 text-sm">
+              <div className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                <p className="text-xs text-muted-foreground/70 font-light">
                   Central Coast
                 </p>
               </div>
@@ -92,19 +92,19 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-blue-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-blue-200 text-sm">
+        <div className="border-t border-border/40 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-muted-foreground/60 font-light">
               &copy; 2026 Los Caracas Shoreline. All rights reserved.
             </p>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="text-blue-200 hover:text-white transition-colors text-sm">
+            <div className="flex gap-8 mt-4 md:mt-0">
+              <a href="#" className="text-xs text-muted-foreground/60 hover:text-accent transition-colors font-light">
                 Privacy Policy
               </a>
-              <a href="#" className="text-blue-200 hover:text-white transition-colors text-sm">
+              <a href="#" className="text-xs text-muted-foreground/60 hover:text-accent transition-colors font-light">
                 Terms of Service
               </a>
-              <a href="#" className="text-blue-200 hover:text-white transition-colors text-sm">
+              <a href="#" className="text-xs text-muted-foreground/60 hover:text-accent transition-colors font-light">
                 Cancellation Policy
               </a>
             </div>
