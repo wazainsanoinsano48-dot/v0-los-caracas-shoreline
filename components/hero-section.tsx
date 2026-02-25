@@ -13,8 +13,8 @@ export function HeroSection() {
           alt="Los Caracas Shoreline Resort"
           fill
           className="object-cover"
-          priority
-          loading="eager"
+          priority={true}
+          quality={85}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/30 to-slate-900"></div>
       </div>
