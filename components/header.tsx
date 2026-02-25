@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
+import { ThemeToggle } from './theme-toggle';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,8 +54,9 @@ export function Header() {
             ))}
           </div>
 
-          {/* Desktop CTA Button */}
-          <div className="hidden md:block">
+          {/* Desktop CTA Button and Theme Toggle */}
+          <div className="hidden md:flex items-center gap-4">
+            <ThemeToggle />
             <button
               onClick={() => scrollToSection('contact')}
               className="px-6 py-2 bg-gradient-to-r from-accent to-accent/80 text-white rounded-sm hover:shadow-md transition-all duration-200 font-light text-xs tracking-wide uppercase"
