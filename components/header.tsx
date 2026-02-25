@@ -25,31 +25,27 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <header className="sticky top-0 z-50 bg-white border-b border-slate-100">
+      <nav className="max-w-6xl mx-auto px-6">
+        <div className="flex items-center justify-between h-18">
           {/* Logo */}
-          <Link href="#" className="flex-shrink-0 flex items-center gap-3">
+          <Link href="#" className="flex-shrink-0 flex items-center gap-2">
             <Image
               src="/logo.png"
               alt="Los Caracas Shoreline"
-              width={60}
-              height={60}
-              className="h-16 w-auto"
+              width={50}
+              height={50}
+              className="h-14 w-auto"
             />
-            <div className="hidden sm:block">
-              <p className="text-xl font-bold text-blue-900">Los Caracas</p>
-              <p className="text-xs text-blue-600">Shoreline</p>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                className="text-sm font-semibold text-slate-700 hover:text-cyan-500 transition-colors"
               >
                 {item.label}
               </button>
@@ -60,9 +56,9 @@ export function Header() {
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="px-6 py-2 bg-cyan-400 text-gray-900 rounded-full hover:bg-cyan-300 transition-colors font-black text-sm"
             >
-              Book Now
+              Book
             </button>
           </div>
 
@@ -82,22 +78,22 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-200">
-            <div className="space-y-1">
+          <div className="md:hidden pb-6 border-t border-slate-100">
+            <div className="space-y-2 mt-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                  className="block w-full text-left px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:text-cyan-500 hover:bg-slate-50 transition-colors"
                 >
                   {item.label}
                 </button>
               ))}
             </div>
-            <div className="mt-4 px-3">
+            <div className="mt-4 px-4">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="w-full px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                className="w-full px-6 py-3 bg-cyan-400 text-gray-900 rounded-full hover:bg-cyan-300 transition-colors font-black text-sm"
               >
                 Book Now
               </button>

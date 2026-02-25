@@ -19,47 +19,33 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl font-bold text-white text-balance leading-tight">
-              Los Caracas Shoreline
-            </h1>
-            <p className="text-xl md:text-2xl text-turquoise-100 font-light italic">
-              Where the river runs to the reef
-            </p>
-          </div>
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h1 className="text-7xl md:text-8xl lg:text-9xl font-black text-white text-balance leading-tight tracking-tight">
+            Where the<br />River Runs<br />to the Reef
+          </h1>
 
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Experience an unforgettable all-inclusive escape on Colombia's Central Coast. Reconnect with nature, adventure, and each other.
+          <p className="text-xl md:text-2xl text-white/95 max-w-2xl mx-auto font-light leading-relaxed">
+            All-inclusive escape on Colombia's Central Coast
           </p>
 
-          <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="pt-8 flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button
               size="lg"
-              className="bg-turquoise-600 hover:bg-turquoise-700 text-white px-8 py-6 text-lg rounded-full"
+              className="bg-cyan-400 hover:bg-cyan-300 text-gray-900 font-black px-10 py-7 text-lg rounded-full shadow-lg transition-all hover:scale-105"
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Explore Packages
+              Book Now
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full"
+              className="border-2 border-white text-white hover:bg-white/20 px-10 py-7 text-lg rounded-full font-bold"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Learn More
+              Discover
             </Button>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <div className="animate-bounce text-white">
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
         </div>
       </div>
     </section>
