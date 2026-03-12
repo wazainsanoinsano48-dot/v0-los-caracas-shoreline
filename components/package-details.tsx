@@ -18,41 +18,38 @@ export function PackageDetails() {
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-turquoise-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Image */}
-          <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+    <section id="package" className="py-24 md:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left side - Features */}
+          <div className="space-y-10">
+            <div className="space-y-3">
+              <p className="text-xs font-light tracking-widest uppercase text-muted-foreground/60">Premium Package</p>
+              <h2 className="text-4xl md:text-5xl font-serif text-foreground">Everything Included</h2>
+            </div>
+            <p className="text-base text-muted-foreground/80 font-light leading-relaxed">
+              Luxury accommodations, culinary excellence, transportation, and 24/7 service. We curate every detail of your escape.
+            </p>
+
+            <div className="space-y-4 pt-2">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <div className="w-4 h-4 rounded-full border-1.5 border-accent flex-shrink-0 mt-1 flex items-center justify-center">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                  </div>
+                  <span className="text-muted-foreground/75 text-sm font-light leading-relaxed">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right side - Image */}
+          <div className="relative h-full min-h-80 rounded-sm overflow-hidden shadow-sm">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260223-WA0011-Oy2pqokiSeyabfBYSCpZ1uQGOIqhPb.jpg"
               alt="All-Inclusive Package"
               className="w-full h-full object-cover"
             />
-          </div>
-
-          {/* Right side - Features */}
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">All-Inclusive Package</h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Everything you need for an unforgettable group escape. From premium accommodations to gourmet meals, transportation, and non-stop entertainment—we handle every detail so you can focus on creating lasting memories.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-turquoise-600 flex-shrink-0 mt-1" />
-                  <span className="text-slate-700 text-lg">{feature}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-white rounded-xl p-6 border-2 border-turquoise-200">
-              <p className="text-slate-600">
-                <span className="font-bold text-slate-900">Perfect for:</span> Groups of 40 people of all ages seeking comprehensive recreation combining rest, nature, and active leisure.
-              </p>
-            </div>
           </div>
         </div>
       </div>

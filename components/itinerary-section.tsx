@@ -28,44 +28,42 @@ export function ItinerarySection() {
   ]
 
   const ActivityCard = ({ activity }: { activity: (typeof day1Activities)[0] }) => (
-    <div className="flex gap-4 pb-6 relative">
+    <div className="flex gap-6 pb-6 relative">
       <div className="flex flex-col items-center">
-        <div className="w-12 h-12 rounded-full bg-turquoise-600 flex items-center justify-center text-white flex-shrink-0">
-          <Clock className="w-5 h-5" />
+        <div className="w-8 h-8 rounded-full border-1.5 border-accent flex items-center justify-center flex-shrink-0 bg-background">
+          <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
         </div>
-        <div className="w-1 h-16 bg-turquoise-200 my-2"></div>
+        <div className="w-px h-14 bg-border/40 my-2"></div>
       </div>
-      <div className="pb-2">
-        <p className="font-bold text-turquoise-600 text-sm">{activity.time}</p>
-        <h4 className="text-lg font-semibold text-slate-900 mt-1">{activity.activity}</h4>
-        <div className="flex items-center gap-2 mt-2 text-slate-600">
-          <MapPin className="w-4 h-4" />
-          <span className="text-sm">{activity.location}</span>
+      <div className="pb-2 flex-1 pt-0.5">
+        <p className="font-light text-muted-foreground/60 text-xs uppercase tracking-widest">{activity.time}</p>
+        <h4 className="text-sm font-serif text-foreground mt-2">{activity.activity}</h4>
+        <div className="flex items-center gap-2 mt-2 text-muted-foreground/50">
+          <MapPin className="w-3 h-3" />
+          <span className="text-xs font-light">{activity.location}</span>
         </div>
       </div>
     </div>
   )
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Your Experience Schedule</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Two days packed with adventure, relaxation, and unforgettable memories
-          </p>
+    <section id="itinerary" className="py-24 md:py-32 bg-gradient-to-b from-background to-secondary/20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="mb-20">
+          <p className="text-xs font-light tracking-widest uppercase text-muted-foreground/60 mb-4">Experience</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-foreground">Your 2-Day Itinerary</h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Day 1 */}
           <div>
-            <h3 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-              <span className="w-12 h-12 rounded-full bg-turquoise-600 text-white flex items-center justify-center text-xl font-bold">
+            <h3 className="text-lg font-serif text-foreground mb-10 flex items-center gap-3">
+              <span className="w-7 h-7 rounded-full border-1.5 border-accent bg-secondary flex items-center justify-center font-serif text-xs font-light text-accent">
                 1
               </span>
-              Day 1: Integration & Nature
+              Day One: Discovery
             </h3>
-            <div className="space-y-2">
+            <div className="space-y-1">
               {day1Activities.map((activity, index) => (
                 <ActivityCard key={index} activity={activity} />
               ))}
@@ -74,13 +72,13 @@ export function ItinerarySection() {
 
           {/* Day 2 */}
           <div>
-            <h3 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-              <span className="w-12 h-12 rounded-full bg-turquoise-600 text-white flex items-center justify-center text-xl font-bold">
+            <h3 className="text-lg font-serif text-foreground mb-10 flex items-center gap-3">
+              <span className="w-7 h-7 rounded-full border-1.5 border-accent bg-secondary flex items-center justify-center font-serif text-xs font-light text-accent">
                 2
               </span>
-              Day 2: Wellness & Farewell
+              Day Two: Renewal
             </h3>
-            <div className="space-y-2">
+            <div className="space-y-1">
               {day2Activities.map((activity, index) => (
                 <ActivityCard key={index} activity={activity} />
               ))}

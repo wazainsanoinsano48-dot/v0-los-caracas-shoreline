@@ -5,61 +5,55 @@ import Image from 'next/image'
 
 export function HeroSection() {
   return (
-    <section className="relative w-full h-screen bg-gradient-to-b from-turquoise-50 to-white overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+    <section className="relative w-full min-h-screen bg-gradient-to-br from-background via-background to-secondary/30 overflow-hidden pt-24 pb-20">
+      {/* Background Image - Right side */}
+      <div className="absolute right-0 top-0 w-1/2 h-full z-0 opacity-40">
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260223-WA0010-7kfFgO4BUC00jxHLBcswWXWWx7lSwI.jpg"
           alt="Los Caracas Shoreline Resort"
           fill
           className="object-cover"
-          priority
+          priority={true}
+          quality={85}
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-background/50 to-background"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl font-bold text-white text-balance leading-tight">
-              Los Caracas Shoreline
-            </h1>
-            <p className="text-xl md:text-2xl text-turquoise-100 font-light italic">
-              Where the river runs to the reef
+      <div className="relative z-10 h-full flex flex-col items-start justify-center px-6 lg:px-12">
+        <div className="max-w-3xl mx-0">
+          <div className="space-y-6">
+            <div className="space-y-3">
+              <p className="text-xs sm:text-sm font-light tracking-widest uppercase text-muted-foreground/70">
+                Discover Paradise
+              </p>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif text-foreground text-balance leading-tight">
+                Where the River Runs to the Reef
+              </h1>
+            </div>
+
+            <p className="text-base sm:text-lg text-muted-foreground/85 max-w-2xl font-light leading-relaxed">
+              An all-inclusive sanctuary designed for transformative moments and cherished memories. Experience Caribbean luxury reimagined.
             </p>
+
+            <div className="pt-4 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-accent to-accent/80 text-white hover:shadow-lg font-semibold px-8 py-3 rounded-sm transition-all duration-300"
+                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Reserve Your Stay
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border border-foreground/20 text-foreground hover:bg-foreground/5 px-8 py-3 rounded-sm font-semibold transition-all duration-300"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Explore
+              </Button>
+            </div>
           </div>
-
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Experience an unforgettable all-inclusive escape on Colombia's Central Coast. Reconnect with nature, adventure, and each other.
-          </p>
-
-          <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="bg-turquoise-600 hover:bg-turquoise-700 text-white px-8 py-6 text-lg rounded-full"
-              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Explore Packages
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Learn More
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <div className="animate-bounce text-white">
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
         </div>
       </div>
     </section>

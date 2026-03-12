@@ -1,15 +1,17 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const _playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
   title: 'Los Caracas Shoreline - All-Inclusive Vacation Packages',
-  description: 'Experience an unforgettable all-inclusive escape on Colombia\'s Central Coast. Perfect for groups. Where the river runs to the reef.',
-  keywords: 'vacation, resort, Colombia, Caribbean, group travel, all-inclusive',
+  description: 'Experience an unforgettable all-inclusive escape at Los Caracas Shoreline. Perfect for groups. Where the river runs to the reef.',
+  keywords: 'vacation, resort, all-inclusive, group travel, Caribbean, Los Caracas Shoreline',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -33,6 +35,7 @@ export const metadata: Metadata = {
     initialScale: 1,
     maximumScale: 1,
   },
+  colorScheme: 'light dark',
 }
 
 export default function RootLayout({
@@ -41,9 +44,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="font-sans antialiased">
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
